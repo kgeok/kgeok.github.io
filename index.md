@@ -6,6 +6,7 @@ My favorite languages are Python, Swift and JavaScript
 
 
 Current Projects:
+
 [Tic-Tac-Toe](http://google.com)
 
 [Decimal to Binary Utility](http://google.com)
