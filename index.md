@@ -7,6 +7,10 @@ My favorite languages are Python, Swift and JavaScript
 
 Current Projects:
 
-[Tic-Tac-Toe](http://google.com)
+[Tic-Tac-Toe](https://github.com/kgeok/tic-tac-toe)
 
-[Base Number Converter Utility](http://google.com)
+[Base Number Converter Utility](https://github.com/kgeok/Base-Number-Converter-Utility)
+
+[Storage Unit](https://kgeok.github.io)
+
+
