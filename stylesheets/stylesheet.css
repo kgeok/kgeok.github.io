@@ -12,12 +12,12 @@ body {
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1;
     overflow: hidden;
   }
 
   li {
-    float: left;
+    float: center;
     display: inline;
   }
 
