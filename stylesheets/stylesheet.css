@@ -10,10 +10,10 @@ body {
   color: #606c71; }
 
 a {
-  color: #1e6bb8;
+  color: #ffffff;
   text-decoration: none; }
   a:hover {
-    text-decoration: underline; }
+    font-weight: bold; }
 
 .btn {
   display: inline-block;
