@@ -9,6 +9,18 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+    display: inline;
+  }
+
 a {
   color: #ffffff;
   text-decoration: none; }
@@ -53,9 +65,17 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
+
+@media (prefers-color-scheme: light) {
+  body {
+      background-color: #3792cb;
+      color: black;
+  }
+}
+
  @media (prefers-color-scheme: dark) {
     body {
-          background-color: #202020;
+          background-color: #0e2433;
           color: white;
         }
     }
