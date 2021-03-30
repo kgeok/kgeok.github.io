@@ -9,17 +9,17 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
-  ul {
+ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-  }
+}
 
-  li {
+li {
     float: center;
     padding: 5px;
     display: inline;
-  }
+}
 
 a {
   color: #ffffff;
@@ -71,6 +71,12 @@ a {
       background-color: #3792cb;
       color: black;
   }
+
+  .page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957); }
 }
 
  @media (prefers-color-scheme: dark) {
@@ -78,13 +84,15 @@ a {
           background-color: #0e2433;
           color: white;
         }
+
+        .page-header {
+          color: #fff;
+          text-align: center;
+          background-color: #b3e2cf;
+          background-image: linear-gradient(90deg, #155799, #159957); }
     }
 
-.page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+
 
 @media screen and (min-width: 64em) {
   .page-header {
