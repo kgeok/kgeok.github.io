@@ -69,7 +69,7 @@ a {
 @media (prefers-color-scheme: light) {
   body {
       background-color: #157cbd;
-      color: black;
+      color: white;
   }
 
   .page-header {
