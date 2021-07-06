@@ -157,7 +157,7 @@ a {
 .main-content :first-child {
   margin-top: 0; }
 .main-content img {
-  max-width: 50%;
+  max-width: 30%;
   height: auto;
   border-radius: 8px; }
 
