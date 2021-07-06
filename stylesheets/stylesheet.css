@@ -161,6 +161,11 @@ a {
   height: auto;
   border-radius: 8px; }
 
+.main-content img:hover {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px; }
+
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
