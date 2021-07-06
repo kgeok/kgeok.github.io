@@ -21,13 +21,6 @@ li {
     display: inline;
 }
 
-img {
-
-  max-width: 50%;
-  height: auto;
-  border-radius: 8px;
-
-}
 
 a {
   color: #ffffff;
@@ -164,7 +157,9 @@ a {
 .main-content :first-child {
   margin-top: 0; }
 .main-content img {
-  max-width: 100%; }
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px; }
 
 .main-content p {
   margin-bottom: 1em; }
