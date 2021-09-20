@@ -202,15 +202,25 @@ a {
 
 .main-content :first-child {
   margin-top: 0; }
-.main-content img {
+.main-content #spotlight {
   max-width: 30%;
   height: auto;
   border-radius: 8px; }
 
-.main-content img:hover {
+.main-content #spotlight:hover {
     max-width: 35%;
     height: auto;
     border-radius: 8px; }
+
+    .main-content img {
+      max-width: auto;
+      height: auto;
+      border-radius: 8px; }
+    
+    .main-content img:hover {
+        max-width: auto;
+        height: auto;
+        border-radius: 8px; }
 
 .main-content p {
   margin-bottom: 1em; }
