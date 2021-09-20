@@ -51,15 +51,29 @@
 Projects
 <br/>
 <h4>
-UpCycled Framed Circuit Board Portrait
+Journey into the Odyssey
 </h4>
 <br/>
+Inspired by map posters which people have used to pin and mark places to travel, I sought out to build a modern version of such a thing, seperate from a typical maps app to just fulfill this singular purpose. There was more that could have been done as well. 
 <br/>
-<img src= "frame.jpeg"></img>
+With the journal feature, you can keep tabs of your overall pins in one convienient view. Pins can be captioned and colored to keep note of certain locations and destinations.
 <br/>
-I tried to make it look like Manhattan but it didn't look that way 😅
+While designing the UI was easy enough thanks to tinkering with the HTML and CSS, the biggest challenge was storing the data long term in the case of application close/restart. Service Workers could have done the trick but since the data was being saved locally instead of through a database, I turned to using cookies to saving data. Since cookies are stored as a single string, there had to be methods called to parse the string and send the values into the appropriate variables that then the functions can call
 <br/>
-Using old circuit boards lying around, you can dremel to make any shape and size and place it into a shadow box
+(Picture of the code)
+<br/>
+
+In the beginning Odyssey was mean't to run on the web, while being submitted as a PWA to the Microsoft Store. But of course that couldn’t just be the end of it. The idea was then to expand it to iOS, Android and macOS. Since the app was built using HTML, CSS and JavaScript, in theory it could have been really easy to port it to the other platforms and it was. But the problem was that it didn’t feel like a native app and that wasn’t okay. If I was going to continue on this path, the app had to be written natively from scratch. The question from there was the following: what set of tools and what language was I going to use to do the conversion. Naturally, an Electron/React Native app was the step in the right direction because it was widely adopted and that it used JavaScript, it was going to be easy to reuse my old code. But ultimately I ended up switching later to Flutter. This meant that the app needed to be retooled to use Dart instead of JavaScript. 
+<br/>
+(Insert picture here)
+<br/>
+Every UI element was to be replaced with Widgets instead of <div> Because the current User Interface already resembled Google’s Material Design, I also used the design language in the new code as well. Doing so made it much easier to implement the UI within a matter of fewer lines of code.
+<br/>
+….
+
+
+
+
 <br/>
       <footer class="site-footer"></footer>
 
