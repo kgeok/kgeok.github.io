@@ -212,15 +212,6 @@ a {
     height: auto;
     border-radius: 8px; }
 
-    .main-content img {
-      max-width: auto;
-      height: auto;
-      border-radius: 8px; }
-    
-    .main-content img:hover {
-        max-width: auto;
-        height: auto;
-        border-radius: 8px; }
 
 .main-content p {
   margin-bottom: 1em; }
