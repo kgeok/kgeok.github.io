@@ -222,6 +222,7 @@ a {
     
     .main-content #spotlight-large:hover {
         max-width: 150%;
+        position: relative;
         left: -25%;
         height: auto;
         border-radius: 8px;
