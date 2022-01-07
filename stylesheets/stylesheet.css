@@ -215,12 +215,18 @@ a {
     .main-content #spotlight-large {
       max-width: 100%;
       height: auto;
-      border-radius: 8px; }
+      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
     
     .main-content #spotlight-large:hover {
-        max-width: 115%;
+        max-width: 150%;
         height: auto;
-        border-radius: 8px; }
+        border-radius: 8px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
 
     .main-content img {
       border-radius: 8px; }
