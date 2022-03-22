@@ -73,15 +73,13 @@
 Journey into Odyssey
 </h3>
 <h4>Introduction<h4>
-<br/>
 Inspired by map posters which people have used to pin and mark places to travel, I sought out to build a modern version of such a thing, seperate from a typical maps app to just fulfill this singular purpose. There was more that could have been done as well. 
 <br/>
-With the journal feature, you can keep tabs of your overall pins in one convienient view. Pins can be captioned and colored to keep note of certain locations and destinations. 
-<br/>
+With the Journal feature, you can keep tabs of your overall pins in one convienient view. Pins can be captioned and colored to keep note of certain locations and destinations. 
 <br/>
 <h4>UI Management<h4>
-<br/>
 Odyssey (Web):
+<br/>
 <br/>
 While designing the UI was easy enough thanks to tinkering with the HTML and CSS.
 <br/>
@@ -89,9 +87,12 @@ For the actual Pin itself, it’s based on a vectorized version of the pin image
 <br/>
 Every UI element was to be replaced with Widgets instead of DIVs Because the current User Interface already resembled Google’s Material Design, I also used the design language in the new code as well. Doing so made it much easier to implement the UI within a matter of fewer lines of code. 
 <br/>
+<br/>
 From Web to App:
 <br/>
+<br/>
 In the beginning Odyssey was mean't to run on the web, while being submitted as a PWA to the Microsoft Store. But of course that couldn’t just be the end of it. The idea was then to expand it to iOS, Android and macOS. Since the app was built using HTML, CSS and JavaScript, in theory it could have been really easy to port it to the other platforms and it was. But the problem was that it didn’t feel like a native app and that wasn’t okay. If I was going to continue on this path, the app had to be written natively from scratch. The question from there was the following: what set of tools and what language was I going to use to do the conversion. Naturally, an Electron/React Native app was the step in the right direction because it was widely adopted and that it used JavaScript, it was going to be easy to reuse my old code. But ultimately I ended up switching later to Flutter. This meant that the app needed to be retooled to use Dart instead of JavaScript. 
+<br/>
 <br/>
 <img src= "webtoflutter.jpg" loading="lazy" height="500px" width= "700px"></img>
 <br/>
@@ -103,11 +104,8 @@ The result was a such a drastic difference, buttons from before now live in a su
 <br/>
 The HTML/JavaScript version will still exist as a Web App for those who want to use Odyssey on an unsupported platform.
 <br/>
-<br/>
 <h4>Memory Management</h4>
-<br/>
 Odyssey (Web):
-<br/>
 The biggest challenge was storing the data long term in the case of application close/restart. Service Workers could have done the trick but since the data was being saved locally instead of through a database, I turned to using cookies to saving data. Since cookies are stored as a single string, there had to be methods called to parse the string and send the values into the appropriate variables that then the functions can call 
 <br/>
 <code>
@@ -145,10 +143,10 @@ placeMarker(map, { lat: parseFloat(CurrCorrX, 10), lng: parseFloat(CurrCorrY, 10
 <br/>
 </code>
 <br/>
-
 Later version of the Web App switched to a localStorage model instead of Cookies for better dependability.
 <br/>
 Odyssey (App):
+<br/>
 <br/>
 Because Flutter and Dart didn't support these HTML/JavaScript properties for the native app, all storage and data was stored as a SQLite database that lived in the OS's App Documents. 
 <br/>
@@ -162,7 +160,6 @@ Pins are stored in a separate list that ideally only the Google Maps Controller 
 <br/>
 <br/>
 <h4>Location Management</h4>
-<br/>
 When running “Pin from Address” we actually only need to do a standard geocode to get the LatLng and just do an appendMarker() we also have to do another reverse geocode because sometimes a user only give a partial address and we rely on full address to be stored in OdysseyDB.db
 <br/>
 “Pin My Location” and zooming into location first ask the OS for it’s physical location, we rely on full accurate location because we don’t want to zoom or pin somewhere the user isn’t. If we don’t see that location is available right there, we might have to ask for permission to get that information
@@ -171,12 +168,11 @@ When running “Pin from Address” we actually only need to do a standard geoco
 <br/>
 <br/>
 <h4>Journal Management</h4>
-<br/>
 I think that this was the toughest aspect of Odyssey to work on aside from DB appending. The logical decision around this was to combine this with appendMarker() so that once the pin was created, reverse geocoding was done then after but for some reason appending on the Journal’s entry list attempts before the session’s PinData list has a chance to populate.
 <br/>
 Odyssey is availible in the App Store, Google Play Store, Microsoft Store and on the Web, the Native app is $0.99 and fund will be used to provide clean up and relief for Oceans/Seas
 <br/>
 <footer class="site-footer"></footer>
-    </section>
-  </body>
+</section>
+</body>
 </html>
