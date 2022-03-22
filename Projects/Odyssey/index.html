@@ -106,6 +106,7 @@ The HTML/JavaScript version will still exist as a Web App for those who want to 
 <br/>
 <h4>Memory Management</h4>
 Odyssey (Web):
+<br/>
 The biggest challenge was storing the data long term in the case of application close/restart. Service Workers could have done the trick but since the data was being saved locally instead of through a database, I turned to using cookies to saving data. Since cookies are stored as a single string, there had to be methods called to parse the string and send the values into the appropriate variables that then the functions can call 
 <br/>
 <code>
@@ -144,6 +145,7 @@ placeMarker(map, { lat: parseFloat(CurrCorrX, 10), lng: parseFloat(CurrCorrY, 10
 </code>
 <br/>
 Later version of the Web App switched to a localStorage model instead of Cookies for better dependability.
+<br/>
 <br/>
 Odyssey (App):
 <br/>
