@@ -72,14 +72,14 @@
 <h3>
 Journey into Odyssey
 </h3>
-<h2>Introduction:</h2>
+<h4>Introduction<h4>
 <br/>
 Inspired by map posters which people have used to pin and mark places to travel, I sought out to build a modern version of such a thing, seperate from a typical maps app to just fulfill this singular purpose. There was more that could have been done as well. 
 <br/>
 With the journal feature, you can keep tabs of your overall pins in one convienient view. Pins can be captioned and colored to keep note of certain locations and destinations. 
 <br/>
 <br/>
-<h2>UI Management:</h2>
+<h4>UI Management<h4>
 <br/>
 Odyssey (Web):
 <br/>
@@ -98,12 +98,13 @@ In the beginning Odyssey was mean't to run on the web, while being submitted as 
 <br/>
 <img src= "flutter.png" loading="lazy" height="400px" width= "700px"></img>
 <br/>
+<br/>
 The result was a such a drastic difference, buttons from before now live in a submenu and animations and transitions are smooth and responsive, this means that certain controls weren't needed anymore. 
 <br/>
 The HTML/JavaScript version will still exist as a Web App for those who want to use Odyssey on an unsupported platform.
 <br/>
 <br/>
-<h2>Memory Management:<h2/>
+<h4>Memory Management</h4>
 <br/>
 Odyssey (Web):
 <br/>
@@ -160,7 +161,7 @@ When a session is restored the contents of OdysseyDB.db are loaded into Pins[] t
 Pins are stored in a separate list that ideally only the Google Maps Controller should be using. In the case we need to “Delete Last Pin” or “Clear all Pins” we touch that list then.
 <br/>
 <br/>
-<h2>Location Management:</h2>
+<h4>Location Management</h4>
 <br/>
 When running “Pin from Address” we actually only need to do a standard geocode to get the LatLng and just do an appendMarker() we also have to do another reverse geocode because sometimes a user only give a partial address and we rely on full address to be stored in OdysseyDB.db
 <br/>
@@ -169,10 +170,9 @@ When running “Pin from Address” we actually only need to do a standard geoco
 *insert snippet of locationgranted*
 <br/>
 <br/>
-<h2>Journal Management:</h2>
+<h4>Journal Management</h4>
 <br/>
 I think that this was the toughest aspect of Odyssey to work on aside from DB appending. The logical decision around this was to combine this with appendMarker() so that once the pin was created, reverse geocoding was done then after but for some reason appending on the Journal’s entry list attempts before the session’s PinData list has a chance to populate.
-<br/>
 <br/>
 Odyssey is availible in the App Store, Google Play Store, Microsoft Store and on the Web, the Native app is $0.99 and fund will be used to provide clean up and relief for Oceans/Seas
 <br/>
