@@ -168,13 +168,42 @@ When running “Pin from Address” we actually only need to do a standard geoco
 <br/>
 “Pin My Location” and zooming into location first ask the OS for it’s physical location, we rely on full accurate location because we don’t want to zoom or pin somewhere the user isn’t. If we don’t see that location is available right there, we might have to ask for permission to get that information
 <br/>
-*insert snippet of locationgranted*
+<code>
+_permissionGranted = await location.hasPermission();
+<br/>
+if (_permissionGranted == prefix.PermissionStatus.denied) {
+<br/>
+_permissionGranted = await location.requestPermission();
+<br/>
+if (_permissionGranted != prefix.PermissionStatus.granted) {
+<br/>
+simpleDialog(context, "No Location", "Unable to Determine Location",
+<br/>
+"Check your Location or Privacy Settings", "error");
+<br/>
+return;
+<br/>
+}
+<br/>
+if (_permissionGranted == prefix.PermissionStatus.deniedForever) {
+<br/>
+simpleDialog(context, "No Location", "Unable to Determine Location",
+<br/>
+"Check your Location or Privacy Settings", "error");
+<br/>
+return;
+<br/>
+}
+<br/>
+}
+<br/>  
+</code>
 <br/>
 <br/>
 <h4>Journal Management</h4>
 I think that this was the toughest aspect of Odyssey to work on aside from DB appending. The logical decision around this was to combine this with appendMarker() so that once the pin was created, reverse geocoding was done then after but for some reason appending on the Journal’s entry list attempts before the session’s PinData list has a chance to populate.
 <br/>
-Odyssey is availible in the App Store, Google Play Store, Microsoft Store and on the Web, the Native app is free for all users.
+Odyssey is availible in the App Store, Google Play Store and on the Web, the Native app is free for all users.
 <br/>
 <footer class="site-footer"></footer>
 </section>
