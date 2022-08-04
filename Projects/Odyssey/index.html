@@ -203,6 +203,43 @@ return;
 <h4>Journal Management</h4>
 I think that this was the toughest aspect of Odyssey to work on aside from DB appending. The logical decision around this was to combine this with appendMarker() so that once the pin was created, reverse geocoding was done then after but for some reason appending on the Journal’s entry list attempts before the session’s PinData list has a chance to populate.
 <br/>
+  <h4>Pin Shapes</h4>
+<br/>
+In the original release of Odyssey there was only one pin shape: circle.
+<br/>
+Starting with Version 1.1, there are four additional shapes, diamond, star, heart and square.
+<br/>
+Odyssey uses SVG based vectors to reduce the reliance on file-based assets and to have the pin's resolution scale up.
+<br/>
+Using the new shapeHandler() function that contains all the SVG codes for all five shapes, we can have a simple variable and a set of switch cases to toggle between which SVG code is being called in the bitmapDescriptorFromSvg() function.
+<br/> 
+This function is called whenever a new pin is being appended whether by tapping the map or on restoring the state from OdysseyDB.db
+<br/>
+  <h4>SQLite DB Update</h4>
+<br/>
+The sqlite Flutter library features the ability to do version updates to an existing database. Taking advantage of this feature allowed Version 1.1 updates and future foundational updates to OdysseyDB.db. 
+<br/>
+On detection that a current database's version number does not match the one specified, a custom function is called, and the version number is incremented.
+<br/> 
+When the function is called, a set of SQL queries to insert the missing columns and append the missing values is done to catch the current database up to date.
+<br/>
+<code>
+  void _upgradeDB(Database db, int oldVersion, int newVersion) async {
+<br/>
+    //This is for upgrading from 1.0 to 1.1 and future updates
+<br/>
+    if (oldVersion < newVersion) {
+<br/>
+    ...
+<br/>
+    }
+<br/>
+   }
+<br/>
+</code>
+<br/>
+In the future, we would need to create distinctions and comparisons between version numbers to see what columns exist and what doesn't to avoid an SQL query execution error.
+<br/>
 Odyssey is availible in the App Store, Google Play Store and on the Web, the Native app is free for all users.
 <br/>
 <footer class="site-footer"></footer>
