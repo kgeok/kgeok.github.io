@@ -162,6 +162,15 @@ When a session is restored the contents of OdysseyDB.db are loaded into Pins[] t
 <br/>
 Pins are stored in a separate list that ideally only the Google Maps Controller should be using. In the case we need to “Delete Last Pin” or “Clear all Pins” we touch that list then.
 <br/>
+In Odyssey 1.3, the ability to edit and delete certain pins were added, this is done through three new functions:
+<br/>
+remunerateState(), initDBfromState() and editPinDB()
+<br/>
+remunerateState() works exactly how it sounds, the arrays containing the state and Google Maps Controller is set to be cleared and initStatefromDB() is ran again to refresh the state
+<br/>
+Instead of pulling the contents from the DB into the state, the contents of the state are put into the DB, this means that whenever a pin is deleted, the IDs can be reassigned through reinputting that data back into the DB
+<br/>
+editPinDB() simply edits the content of the PinData and DB according to given ID
 <br/>
 <h4>Location Management</h4>
 When running “Pin from Address” we actually only need to do a standard geocode to get the LatLng and just do an appendMarker() we also have to do another reverse geocode because sometimes a user only give a partial address and we rely on full address to be stored in OdysseyDB.db
@@ -237,9 +246,6 @@ When the function is called, a set of SQL queries to insert the missing columns 
    }
 <br/>
 </code>
-<br/>
-In the future, we would need to create distinctions and comparisons between version numbers to see what columns exist and what doesn't to avoid an SQL query execution error.
-<br/>
 <br/>
 Odyssey is available in the App Store, Google Play Store and on the Web, the Native app is free for all users.
 <br/>
