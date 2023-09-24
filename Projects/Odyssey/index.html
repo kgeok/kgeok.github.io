@@ -205,6 +205,15 @@ LoadState[" Coor_" + i]=LoadState["Coor_" + i].split(";").shift(); <br />
                         </code>
                         <br />
                         <br />
+                        <h4>Near By</h4>
+                        <br />
+                        Near By is a new feature introduced with Version 1.4 that allowed local places to be found organized by category.
+                        <br />
+                        The user’s current location is sent through the Google Places API and presented through a bottomSheetDialog
+                        <br />
+                        Certain Journal Entry attributes are pre-populated with the results for the places selected.
+                        <br />
+                        <br/>
                         <h4>Journal Management</h4>
                         I think that this was the toughest aspect of Odyssey to work on aside from DB appending. The logical decision around this was to combine this with appendMarker() so that once the pin was created, reverse geocoding was done then after but for some reason appending on the Journal’s entry list attempts before the session’s PinData list has a chance to populate.
                         <br />
